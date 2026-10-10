@@ -5,124 +5,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Justie — 个人主页 | Homepage</title>
   <meta name="description" content="Justie 的学术个人主页 | 山东大学 硕士研究生 | Justie's academic homepage, Shandong University">
+  <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="data:,">
 </head>
 <body class="lang-zh">
 
-<div class="lang-switch" role="group" aria-label="Language">
-  <button data-lang="zh" class="active">中</button><span>/</span><button data-lang="en">EN</button>
-</div>
+<!-- ======================= 顶部导航 / Nav ======================= -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">Justie</a>
+    <nav class="nav">
+      <a href="#about"><span class="zh">关于</span><span class="en">About</span></a>
+      <a href="#research"><span class="zh">研究</span><span class="en">Research</span></a>
+      <a href="#publications"><span class="zh">论文</span><span class="en">Papers</span></a>
+      <a href="#projects"><span class="zh">项目</span><span class="en">Projects</span></a>
+      <a href="#education"><span class="zh">教育</span><span class="en">Education</span></a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button data-lang="zh" class="active">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
 
-<div class="container">
+<main id="top">
 
-  <!-- ======================= 侧边栏 / Sidebar ======================= -->
-  <aside class="sidebar">
+  <!-- ======================= Hero ======================= -->
+  <section class="hero">
     <img class="avatar" src="assets/avatar.svg" alt="Photo">
     <h1 class="name">Justie</h1>
-    <p class="name-sub"><span class="zh">山东大学</span><span class="en">Shandong University</span></p>
-    <p class="title">
-      <span class="zh">硕士研究生</span><span class="en">Master's Student</span>
+    <p class="tagline">
+      <span class="zh">硕士研究生 · 山东大学</span>
+      <span class="en">Master's Student · Shandong University</span>
     </p>
-    <!-- 导师 / Advisor：在此填写，例如 <span class="zh">导师：XXX 教授</span><span class="en">Advisor: Prof. XXX</span> -->
+    <!-- 导师 / Advisor：填好后把下面 span 里的内容补全 -->
     <p class="advisor">
       <span class="zh">导师：</span><span class="en">Advisor: </span>
     </p>
-
-    <ul class="links">
-      <li><a href="mailto:advjustie@gmail.com">advjustie@gmail.com</a></li>
-      <li><a href="https://github.com/advjustie-hue" target="_blank" rel="noopener">GitHub</a></li>
+    <div class="actions">
+      <a class="pill primary" href="mailto:advjustie@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.5l8 5 8-5V7H4zm16 2.8-8 5-8-5V17h16V9.8z"/></svg>
+        <span class="zh">邮箱</span><span class="en">Email</span>
+      </a>
+      <a class="pill" href="https://github.com/advjustie-hue" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        GitHub
+      </a>
       <!-- 有了再放开 / enable when available
-      <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
-      <li><a href="assets/cv.pdf" target="_blank"><span class="zh">简历</span><span class="en">CV</span></a></li>
+      <a class="pill" href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="pill" href="assets/cv.pdf" target="_blank"><span class="zh">简历</span><span class="en">CV</span></a>
       -->
-    </ul>
+    </div>
+  </section>
 
-    <nav class="nav">
-      <a href="#about"><span class="zh">关于我</span><span class="en">About</span></a>
-      <a href="#research"><span class="zh">研究方向</span><span class="en">Research</span></a>
-      <a href="#publications"><span class="zh">论文</span><span class="en">Publications</span></a>
-      <a href="#projects"><span class="zh">项目经历</span><span class="en">Projects</span></a>
-      <a href="#education"><span class="zh">教育经历</span><span class="en">Education</span></a>
-    </nav>
-  </aside>
+  <!-- ======================= 内容 / Content ======================= -->
+  <div class="wrap">
 
-  <!-- ======================= 主体 / Content ======================= -->
-  <main class="content">
-
-    <section id="about">
-      <h2><span class="zh">关于我</span><span class="en">About Me</span></h2>
-      <p class="zh">
+    <section id="about" class="card">
+      <h2><span class="zh">关于我</span><span class="en">About</span></h2>
+      <p class="zh lead">
         我是山东大学的硕士研究生，本科同样毕业于山东大学。
         目前的研究方向为 <strong>（在此填写）</strong>。
       </p>
-      <p class="en">
+      <p class="en lead">
         I am a master's student at Shandong University (SDU), where I also received my bachelor's degree.
         My research interests include <strong>(to be filled)</strong>.
       </p>
     </section>
 
-    <section id="research">
-      <h2><span class="zh">研究方向</span><span class="en">Research Interests</span></h2>
-      <ul class="bullets">
-        <li><span class="zh">方向一（待填写）</span><span class="en">Topic A (to be filled)</span></li>
-        <li><span class="zh">方向二（待填写）</span><span class="en">Topic B (to be filled)</span></li>
-      </ul>
+    <section id="research" class="card">
+      <h2><span class="zh">研究方向</span><span class="en">Research</span></h2>
+      <div class="grid">
+        <div class="tile">
+          <div class="tile-icon">◆</div>
+          <h3><span class="zh">方向一</span><span class="en">Topic A</span></h3>
+          <p><span class="zh">一两句话介绍（待填写）。</span><span class="en">A short description (to be filled).</span></p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon">●</div>
+          <h3><span class="zh">方向二</span><span class="en">Topic B</span></h3>
+          <p><span class="zh">一两句话介绍（待填写）。</span><span class="en">A short description (to be filled).</span></p>
+        </div>
+      </div>
     </section>
 
-    <section id="publications">
+    <section id="publications" class="card">
       <h2><span class="zh">论文</span><span class="en">Publications</span></h2>
       <p class="muted">
         <span class="zh">暂无，持续更新中。</span><span class="en">Coming soon.</span>
       </p>
       <!-- 有论文后使用下面的模板 / template for a publication entry:
-      <div class="pub">
-        <div class="pub-year">2026</div>
-        <div class="pub-body">
-          <div class="pub-title">Paper Title</div>
-          <div class="pub-authors"><strong>Justie</strong>, Coauthor A, Coauthor B</div>
-          <div class="pub-venue">Conference on XXX (XXX), 2026</div>
-          <div class="pub-links"><a href="#">[PDF]</a> <a href="#">[Code]</a></div>
-        </div>
-      </div>
+      <ul class="list">
+        <li>
+          <span class="when">2026</span>
+          <div>
+            <div class="item-title">Paper Title</div>
+            <div class="item-sub"><strong>Justie</strong>, Coauthor A, Coauthor B</div>
+            <div class="item-sub muted">Conference on XXX (XXX), 2026</div>
+            <div class="item-links"><a href="#">PDF</a><a href="#">Code</a></div>
+          </div>
+        </li>
+      </ul>
       -->
     </section>
 
-    <section id="projects">
+    <section id="projects" class="card">
       <h2><span class="zh">项目经历</span><span class="en">Projects</span></h2>
-      <ul class="timeline">
+      <ul class="list">
         <li>
-          <span class="date">2025 — <span class="zh">至今</span><span class="en">Present</span></span>
+          <span class="when">2025 — <span class="zh">至今</span><span class="en">Now</span></span>
           <div>
-            <strong><span class="zh">项目名称（待填写）</span><span class="en">Project Name (to be filled)</span></strong><br>
-            <span class="muted">
+            <div class="item-title"><span class="zh">项目名称（待填写）</span><span class="en">Project Name (to be filled)</span></div>
+            <div class="item-sub muted">
               <span class="zh">一句话描述你在项目中做了什么。</span>
               <span class="en">One sentence describing your contribution.</span>
-            </span>
+            </div>
           </div>
         </li>
       </ul>
     </section>
 
-    <section id="education">
+    <section id="education" class="card">
       <h2><span class="zh">教育经历</span><span class="en">Education</span></h2>
-      <ul class="timeline">
+      <ul class="list">
         <li>
-          <span class="date">— <span class="zh">至今</span><span class="en">Present</span></span>
-          <div><span class="zh">山东大学，硕士研究生在读</span><span class="en">Shandong University, M.S. (in progress)</span></div>
+          <span class="when">— <span class="zh">至今</span><span class="en">Now</span></span>
+          <div>
+            <div class="item-title"><span class="zh">山东大学</span><span class="en">Shandong University</span></div>
+            <div class="item-sub muted"><span class="zh">硕士研究生在读</span><span class="en">M.S., in progress</span></div>
+          </div>
         </li>
         <li>
-          <span class="date">—</span>
-          <div><span class="zh">山东大学，工学学士</span><span class="en">Shandong University, B.Eng.</span></div>
+          <span class="when">—</span>
+          <div>
+            <div class="item-title"><span class="zh">山东大学</span><span class="en">Shandong University</span></div>
+            <div class="item-sub muted"><span class="zh">工学学士</span><span class="en">B.Eng.</span></div>
+          </div>
         </li>
       </ul>
     </section>
 
-    <footer>
-      <p>© 2026 Justie · <span class="zh">最后更新</span><span class="en">Last updated</span>: 2026.10</p>
-    </footer>
-  </main>
-</div>
+  </div>
+
+  <footer>
+    <p>© 2026 Justie · <span class="zh">最后更新</span><span class="en">Last updated</span> 2026.10</p>
+  </footer>
+</main>
 
 <script>
 (function () {
@@ -140,6 +169,11 @@
   try { saved = localStorage.getItem('lang'); } catch (e) {}
   if (!saved) saved = /^zh/i.test(navigator.language) ? 'zh' : 'en';
   setLang(saved);
+
+  var bar = document.querySelector('.topbar');
+  function onScroll() { bar.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 })();
 </script>
 </body>
