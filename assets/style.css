@@ -118,8 +118,10 @@ h1.display em { font-style: italic; }
 }
 .hero-art figcaption {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 7px 10px;
-  border-top: 1px solid #fff; background: var(--accent); color: #fff; display: flex; justify-content: space-between;
+  border-top: 1px solid #fff; background: var(--accent); color: #fff; display: flex; justify-content: space-between; gap: 8px;
+  font-size: 10px; white-space: nowrap; overflow: hidden;
 }
+.hero-art figcaption span { overflow: hidden; text-overflow: ellipsis; }
 .hero-art figcaption::after { content: "◆"; }
 
 /* ---------- sub-page head ---------- */
