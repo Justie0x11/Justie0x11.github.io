@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justie — 个人主页 | Homepage</title>
+  <meta name="description" content="Justie 的学术个人主页 | 山东大学 硕士研究生 | Justie's academic homepage, Shandong University">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body class="lang-zh">
+
+<div class="lang-switch" role="group" aria-label="Language">
+  <button data-lang="zh" class="active">中</button><span>/</span><button data-lang="en">EN</button>
+</div>
+
+<div class="container">
+
+  <!-- ======================= 侧边栏 / Sidebar ======================= -->
+  <aside class="sidebar">
+    <img class="avatar" src="assets/avatar.svg" alt="Photo">
+    <h1 class="name">Justie</h1>
+    <p class="name-sub"><span class="zh">山东大学</span><span class="en">Shandong University</span></p>
+    <p class="title">
+      <span class="zh">硕士研究生</span><span class="en">Master's Student</span>
+    </p>
+    <!-- 导师 / Advisor：在此填写，例如 <span class="zh">导师：XXX 教授</span><span class="en">Advisor: Prof. XXX</span> -->
+    <p class="advisor">
+      <span class="zh">导师：</span><span class="en">Advisor: </span>
+    </p>
+
+    <ul class="links">
+      <li><a href="mailto:advjustie@gmail.com">advjustie@gmail.com</a></li>
+      <li><a href="https://github.com/advjustie-hue" target="_blank" rel="noopener">GitHub</a></li>
+      <!-- 有了再放开 / enable when available
+      <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
+      <li><a href="assets/cv.pdf" target="_blank"><span class="zh">简历</span><span class="en">CV</span></a></li>
+      -->
+    </ul>
+
+    <nav class="nav">
+      <a href="#about"><span class="zh">关于我</span><span class="en">About</span></a>
+      <a href="#research"><span class="zh">研究方向</span><span class="en">Research</span></a>
+      <a href="#publications"><span class="zh">论文</span><span class="en">Publications</span></a>
+      <a href="#projects"><span class="zh">项目经历</span><span class="en">Projects</span></a>
+      <a href="#education"><span class="zh">教育经历</span><span class="en">Education</span></a>
+    </nav>
+  </aside>
+
+  <!-- ======================= 主体 / Content ======================= -->
+  <main class="content">
+
+    <section id="about">
+      <h2><span class="zh">关于我</span><span class="en">About Me</span></h2>
+      <p class="zh">
+        我是山东大学的硕士研究生，本科同样毕业于山东大学。
+        目前的研究方向为 <strong>（在此填写）</strong>。
+      </p>
+      <p class="en">
+        I am a master's student at Shandong University (SDU), where I also received my bachelor's degree.
+        My research interests include <strong>(to be filled)</strong>.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2><span class="zh">研究方向</span><span class="en">Research Interests</span></h2>
+      <ul class="bullets">
+        <li><span class="zh">方向一（待填写）</span><span class="en">Topic A (to be filled)</span></li>
+        <li><span class="zh">方向二（待填写）</span><span class="en">Topic B (to be filled)</span></li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2><span class="zh">论文</span><span class="en">Publications</span></h2>
+      <p class="muted">
+        <span class="zh">暂无，持续更新中。</span><span class="en">Coming soon.</span>
+      </p>
+      <!-- 有论文后使用下面的模板 / template for a publication entry:
+      <div class="pub">
+        <div class="pub-year">2026</div>
+        <div class="pub-body">
+          <div class="pub-title">Paper Title</div>
+          <div class="pub-authors"><strong>Justie</strong>, Coauthor A, Coauthor B</div>
+          <div class="pub-venue">Conference on XXX (XXX), 2026</div>
+          <div class="pub-links"><a href="#">[PDF]</a> <a href="#">[Code]</a></div>
+        </div>
+      </div>
+      -->
+    </section>
+
+    <section id="projects">
+      <h2><span class="zh">项目经历</span><span class="en">Projects</span></h2>
+      <ul class="timeline">
+        <li>
+          <span class="date">2025 — <span class="zh">至今</span><span class="en">Present</span></span>
+          <div>
+            <strong><span class="zh">项目名称（待填写）</span><span class="en">Project Name (to be filled)</span></strong><br>
+            <span class="muted">
+              <span class="zh">一句话描述你在项目中做了什么。</span>
+              <span class="en">One sentence describing your contribution.</span>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2><span class="zh">教育经历</span><span class="en">Education</span></h2>
+      <ul class="timeline">
+        <li>
+          <span class="date">— <span class="zh">至今</span><span class="en">Present</span></span>
+          <div><span class="zh">山东大学，硕士研究生在读</span><span class="en">Shandong University, M.S. (in progress)</span></div>
+        </li>
+        <li>
+          <span class="date">—</span>
+          <div><span class="zh">山东大学，工学学士</span><span class="en">Shandong University, B.Eng.</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2026 Justie · <span class="zh">最后更新</span><span class="en">Last updated</span>: 2026.10</p>
+    </footer>
+  </main>
+</div>
+
+<script>
+(function () {
+  var body = document.body;
+  var buttons = document.querySelectorAll('.lang-switch button');
+  function setLang(lang) {
+    body.classList.remove('lang-zh', 'lang-en');
+    body.classList.add('lang-' + lang);
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.lang === lang); });
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  if (!saved) saved = /^zh/i.test(navigator.language) ? 'zh' : 'en';
+  setLang(saved);
+})();
+</script>
+</body>
+</html>
