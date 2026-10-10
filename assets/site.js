@@ -1,17 +1,28 @@
 (function () {
-  var body = document.body;
-  var buttons = document.querySelectorAll('.lang-switch button');
+  var dict = window.I18N || {}, langs = window.LANGS || [];
+  var selects = document.querySelectorAll('.lang-select');
+  function htmlLang(code) { for (var i = 0; i < langs.length; i++) if (langs[i][0] === code) return langs[i][2]; return code; }
   function setLang(lang) {
-    body.classList.remove('lang-zh', 'lang-en');
-    body.classList.add('lang-' + lang);
-    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-    buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.lang === lang); });
+    if (!dict[lang]) lang = 'en';
+    var t = dict[lang], en = dict.en || {};
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n'); el.textContent = t[k] != null ? t[k] : (en[k] || '');
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-html'); el.innerHTML = t[k] != null ? t[k] : (en[k] || '');
+    });
+    document.documentElement.lang = htmlLang(lang);
+    document.body.className = document.body.className.replace(/\blang-\w+/g, '').trim() + ' lang-' + lang;
+    selects.forEach(function (s) { s.value = lang; });
     try { localStorage.setItem('lang', lang); } catch (e) {}
   }
-  buttons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+  selects.forEach(function (s) { s.addEventListener('change', function () { setLang(s.value); }); });
   var saved = null;
   try { saved = localStorage.getItem('lang'); } catch (e) {}
-  if (!saved) saved = /^zh/i.test(navigator.language) ? 'zh' : 'en';
+  if (!saved || !dict[saved]) {
+    var nav = (navigator.language || 'en').toLowerCase().slice(0, 2);
+    saved = dict[nav] ? nav : 'en';
+  }
   setLang(saved);
 
   var values = { EMAIL: 'advjustie@gmail.com', GITHUB: 'github.com/Justie0x11', SCHOLAR: '—' };

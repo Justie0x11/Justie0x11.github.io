@@ -35,8 +35,9 @@ a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 em { font-style: italic; }
 
-.lang-zh .en { display: none !important; }
-.lang-en .zh { display: none !important; }
+/* per-language serif fallbacks for the display face */
+html[lang="ja"] { --font-display: "Instrument Serif", "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif CJK JP", "Source Han Serif JP", serif; }
+html[lang="ko"] { --font-display: "Instrument Serif", "Apple SD Gothic Neo", "Nanum Myeongjo", "Noto Serif CJK KR", "Source Han Serif KR", serif; }
 
 .mono { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
 .display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.01em; }
@@ -61,12 +62,15 @@ em { font-style: italic; }
 }
 .brand:hover { text-decoration: none; }
 .brand span { opacity: .55; }
-.lang-switch { display: inline-flex; border: 1px solid var(--fg); margin-left: 8px; }
-.lang-switch button {
-  border: 0; cursor: pointer; font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em;
-  padding: 5px 9px; color: var(--fg); background: transparent; transition: background .15s, color .15s;
+.lang-select {
+  appearance: none; -webkit-appearance: none; cursor: pointer; margin-left: 8px;
+  border: 1px solid var(--fg); background: transparent; color: var(--fg);
+  padding: 5px 24px 5px 9px; letter-spacing: .06em; text-transform: none; font-size: 11px;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 12px) 50%, calc(100% - 8px) 50%; background-size: 4px 4px, 4px 4px; background-repeat: no-repeat;
 }
-.lang-switch button.active { background: var(--fg); color: #fff; }
+.lang-select:hover { background-color: var(--panel); }
+.lang-select:focus { outline: 1px solid var(--fg); outline-offset: 1px; }
 
 /* ---------- hero ---------- */
 .hero {
