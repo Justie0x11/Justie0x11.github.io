@@ -5,14 +5,14 @@
 @font-face { font-family: "Barlow Condensed"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/barlow-condensed.woff2") format("woff2"); }
 
 :root {
-  --accent: #e3000f;
-  --accent-deep: #b5000c;
-  --bg: #f4f4f4;
+  --accent: #0f4c3a;
+  --accent-deep: #0a3528;
+  --bg: #f3efe7;
   --fg: var(--accent);
   --white: #ffffff;
-  --dim: rgba(227, 0, 15, 0.62);
-  --line: rgba(227, 0, 15, 0.28);
-  --panel: rgba(227, 0, 15, 0.06);
+  --dim: rgba(15, 76, 58, 0.62);
+  --line: rgba(15, 76, 58, 0.28);
+  --panel: rgba(15, 76, 58, 0.06);
   --font-display: "Instrument Serif", "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", Georgia, serif;
   --font-body: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "PingFang SC", "Microsoft YaHei", monospace;
