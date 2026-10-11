@@ -11,6 +11,10 @@
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
       var k = el.getAttribute('data-i18n-html'); el.innerHTML = t[k] != null ? t[k] : (en[k] || '');
     });
+    var page = document.body.getAttribute('data-page');
+    if (page && t['title.' + page]) document.title = t['title.' + page];
+    var md = document.querySelector('meta[name="description"]');
+    if (md && t['meta.desc']) md.setAttribute('content', t['meta.desc']);
     document.documentElement.lang = htmlLang(lang);
     document.body.className = document.body.className.replace(/\blang-\w+/g, '').trim() + ' lang-' + lang;
     selects.forEach(function (s) { s.value = lang; });

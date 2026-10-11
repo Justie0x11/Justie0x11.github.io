@@ -11,6 +11,8 @@
 - 照片：把照片放到 `assets/`（如 `avatar.jpg`），并把 `index.html` 中 `assets/avatar.svg` 改成新文件名。
 - 简历：放入 `assets/cv.pdf`，并取消 `index.html` 中 CV 链接的注释。
 - 配色、字体：编辑 `assets/style.css` 顶部的 `:root` 变量。
+- 页面标题 / meta 描述：`assets/i18n.js` 中 `title.*` 与 `meta.desc`；`<head>` 里的 Open Graph 标签为静态英文，改内容时同步。
+- 其他：`404.html`（GitHub Pages 自动使用）、`sitemap.xml`、`robots.txt`、`assets/favicon.svg`、`assets/og.svg`（分享卡片）。打印 / 存 PDF 时自动隐藏导航与按钮。
 
 ## 部署
 
